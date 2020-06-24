@@ -20,6 +20,8 @@ USER node
 
 COPY --chown=node:node . .
 
+COPY oradata/* /usr/lib/oracle/19.3/client64/lib/network/admin/
+
 EXPOSE 3333
 
 CMD ["yarn", "start"]

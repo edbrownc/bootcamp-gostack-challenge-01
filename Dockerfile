@@ -14,10 +14,9 @@ WORKDIR /home/node/app
 
 COPY package.json yarn.* ./
 
-USER node
-
 RUN yarn
 
+USER node
 
 COPY --chown=node:node . .
 

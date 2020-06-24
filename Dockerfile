@@ -20,6 +20,6 @@ USER node
 
 COPY --chown=node:node . .
 
-EXPOSE 8080
+EXPOSE 3333
 
 CMD ["yarn", "start"]

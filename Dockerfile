@@ -9,8 +9,8 @@ RUN mkdir -p /home/node/app/node_modules && chown -R node:node /home/node/app
 
 WORKDIR /home/node/app
 
-RUN chgrp -R 0 /home/node/app && \
-    chmod -R g=u /home/node/app
+##RUN chgrp -R 0 /home/node/app && \
+ ##   chmod -R g=u /home/node/app
 
 COPY package.json yarn.* ./
 

@@ -5,7 +5,7 @@ RUN wget http://yum.oracle.com/repo/OracleLinux/OL7/oracle/instantclient/x86_64/
 RUN alien -i --scripts oracle-instantclient*.rpm
 RUN rm -f oracle-instantclient19.3*.rpm && apt-get -y autoremove && apt-get -y clean
 
-COPY /oradata/* /usr/lib/oracle/19.3/client64/lib/network/admin/
+COPY volume-bjjwq/oradata/* /usr/lib/oracle/19.3/client64/lib/network/admin/
 
 RUN mkdir -p /home/node/app/node_modules && chown -R node:node /home/node/app
 

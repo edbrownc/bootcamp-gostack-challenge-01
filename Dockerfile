@@ -9,7 +9,10 @@ RUN wget https://download.oracle.com/otn_software/linux/instantclient/instantcli
     cd instantclient* && \
     rm -f *jdbc* *occi* *mysql* *jar uidrvci genezi adrci && \
     echo /opt/oracle/instantclient* > /etc/ld.so.conf.d/oracle-instantclient.conf && \
-    ldconfig
+    ldconfig && \
+    mv /opt/oracle/instantclient_19_8 /opt/oracle/instantclient
+
+ENV LD_LIBRARY_PATH=/opt/oracle/instantclient
 
 WORKDIR /app
 COPY . /app

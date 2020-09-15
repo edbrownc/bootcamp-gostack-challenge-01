@@ -2,7 +2,7 @@ FROM node:12-buster-slim
 
 WORKDIR /opt/oracle
 RUN apt-get update
-RUN apt-get install -y alien libaio wget unzip
+RUN apt-get install -y alien libaio1 wget unzip
 RUN wget https://download.oracle.com/otn_software/linux/instantclient/instantclient-basiclite-linuxx64.zip && \
     unzip instantclient-basiclite-linuxx64.zip && \
     rm -f instantclient-basiclite-linuxx64.zip && \

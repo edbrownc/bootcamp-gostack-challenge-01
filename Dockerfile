@@ -1,11 +1,15 @@
 FROM node:12-alpine
 
-WORKDIR /tmp
+WORKDIR /opt/oracle
 RUN apt-get update
-RUN apt-get install -y alien libaio1 wget
-RUN wget http://yum.oracle.com/repo/OracleLinux/OL7/oracle/instantclient/x86_64/getPackage/oracle-instantclient19.8-basic-19.8.0.0.0-1.x86_64.rpm
-RUN alien -i --scripts oracle-instantclient*.rpm
-RUN rm -f oracle-instantclient19.8*.rpm
+RUN apt-get install -y alien libaio wget unzip
+RUN wget https://download.oracle.com/otn_software/linux/instantclient/instantclient-basiclite-linuxx64.zip && \
+    unzip instantclient-basiclite-linuxx64.zip && \
+    rm -f instantclient-basiclite-linuxx64.zip && \
+    cd instantclient* && \
+    rm -f *jdbc* *occi* *mysql* *jar uidrvci genezi adrci && \
+    echo /opt/oracle/instantclient* > /etc/ld.so.conf.d/oracle-instantclient.conf && \
+    ldconfig
 
 WORKDIR /app
 COPY . /app

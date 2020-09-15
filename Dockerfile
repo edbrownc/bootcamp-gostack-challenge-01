@@ -1,11 +1,11 @@
 FROM node:12
 
-WORKDIR /opt/oracle
-
-RUN apt-get update && apt-get install -y alien libaio1 \
-&& wget http://yum.oracle.com/repo/OracleLinux/OL7/oracle/instantclient/x86_64/getPackage/oracle-instantclient19.8-basic-19.8.0.0.0-1.x86_64.rpm \
-&& alien -i --scripts oracle-instantclient*.rpm \
-&& rm -f oracle-instantclient*.rpm && apt-get -y autoremove && apt-get -y clean
+WORKDIR /tmp
+RUN apt-get update
+RUN apt-get install -y alien libaio1
+RUN wget http://yum.oracle.com/repo/OracleLinux/OL7/oracle/instantclient/x86_64/getPackage/oracle-instantclient19.8-basic-19.8.0.0.0-1.x86_64.rpm
+RUN alien -i --scripts oracle-instantclient*.rpm
+RUN rm -f oracle-instantclient19.8*.rpm
 
 WORKDIR /app
 COPY . /app

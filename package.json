@@ -8,11 +8,49 @@
     "build": "node index.js",
     "start": "node index.js"
   },
-  "dependencies": {
-    "express": "^4.17.1",
-    "oracledb": "^4.2.0"
+  dependencies": {
+    "@godaddy/terminus": "^1.0.0",
+    "axios": "^0.19.2",
+    "axios-https-proxy-fix": "^0.17.1",
+    "camaro": "^5.0.3",
+    "compression": "^1.7.4",
+    "config": "^1.30.0",
+    "cors": "^2.8.5",
+    "date-fns": "^2.14.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.16.1",
+    "express-async-errors": "^3.1.1",
+    "express-session": "^1.17.1",
+    "helmet": "^3.21.3",
+    "https-proxy-agent": "^5.0.0",
+    "js-yaml": "^3.12.0",
+    "node-cron": "^2.0.3",
+    "node-rsa": "^1.0.0",
+    "nodemailer": "^6.4.11",
+    "oracledb": "^5.0.0",
+    "passport": "^0.4.1",
+    "passport-saml": "^1.3.4",
+    "request": "^2.87.0",
+    "sonarqube-scanner-node": "0.0.10",
+    "winston": "^3.0.0",
+    "x509.js": "^1.0.0",
+    "yup": "^0.29.1"
   },
-  "devDependencies": {
-    "nodemon": "^2.0.2"
+"devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "chai": "^4.1.2",
+    "eslint": "6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "2.20.1",
+    "eslint-plugin-prettier": "^3.1.3",
+    "jest": "^23.2.0",
+    "jest-junit": "^6.2.1",
+    "mocha": "^5.2.0",
+    "mocha-junit-reporter": "^1.17.0",
+    "mocha-multi-reporters": "^1.1.7",
+    "nodemon": "^2.0.2",
+    "prettier": "^2.0.5",
+    "supertest": "^3.1.0"
   }
 }

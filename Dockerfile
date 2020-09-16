@@ -3,8 +3,8 @@ FROM ferdinandyanto/docker-node-oracle:10.16.0
 WORKDIR /app
 COPY . /app
 
-RUN yarn
+RUN npm install
 
-EXPOSE 3333
+EXPOSE 8080
 
-CMD ["yarn", "start"]
+CMD npm start

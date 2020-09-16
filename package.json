@@ -8,7 +8,7 @@
     "build": "node index.js",
     "start": "node index.js"
   },
-  dependencies": {
+  "dependencies": {
     "@godaddy/terminus": "^1.0.0",
     "axios": "^0.19.2",
     "axios-https-proxy-fix": "^0.17.1",

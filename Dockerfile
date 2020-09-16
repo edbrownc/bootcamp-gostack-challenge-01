@@ -1,4 +1,4 @@
-FROM ferdinandyanto/docker-node-oracle
+FROM ferdinandyanto/docker-node-oracle:10.16.0
 
 WORKDIR /app
 COPY . /app

@@ -12,7 +12,7 @@ ENV LD_LIBRARY_PATH=$ORACLE_HOME/lib
 WORKDIR /app
 COPY . /app
 
-USER SRT2
+USER node
 
 RUN yarn
 

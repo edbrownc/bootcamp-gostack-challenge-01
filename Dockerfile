@@ -17,6 +17,8 @@ COPY . /app
 
 RUN yarn
 
+USER SRT2:SRT2
+
 EXPOSE 8080
 
 ENTRYPOINT ["yarn", "start"]

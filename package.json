@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@godaddy/terminus": "^1.0.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "axios-https-proxy-fix": "^0.17.1",
     "camaro": "^5.0.3",
     "compression": "^1.7.4",
